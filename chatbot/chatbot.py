@@ -51,9 +51,9 @@ kernel.learn("AIML.aiml")
 
 # while True:
 # @app.route("/bot", methods=["POST"])
-@app.route("/bot", methods=["POST"])
+@app.route("/bot", methods=["GET"])
 def response():
-    query = dict(request.form)['query']
+    query = dict(request.args)['query']
     # query = dict(request.args)['query']
 
     input_text = query
