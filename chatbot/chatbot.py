@@ -6,8 +6,8 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from flask import Flask, jsonify, request
-# nltk.download('stopwords')
-# nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('punkt')
 
 app = Flask(__name__)
 
@@ -53,8 +53,8 @@ kernel.learn("AIML.aiml")
 # @app.route("/bot", methods=["POST"])
 @app.route("/bot", methods=["POST"])
 def response():
-    query = dict(request.args)['query']
-    # query = dict(request.form)['query']
+    query = dict(request.form)['query']
+    # query = dict(request.args)['query']
 
     input_text = query
     # input_text = input('User> ')
