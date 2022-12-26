@@ -6,8 +6,9 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from flask import Flask, jsonify, request
-# nltk.download('stopwords')
-# nltk.download('punkt')
+import nltk
+nltk.download('stopwords')
+nltk.download('punkt')
 
 app = Flask(__name__)
 
