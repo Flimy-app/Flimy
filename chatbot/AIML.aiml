@@ -1,0 +1,38 @@
+<aiml version="1.0.1" encoding="UTF-8">
+
+<category>
+<pattern> halo </pattern>
+<template> hai </template>
+</category>
+
+<category>
+<pattern> film dibintangi *</pattern>
+<template> film tersebut adalah sebagai berikut: </template>
+</category>
+
+<category>
+<pattern> berikan rekomendasi film yang dibintangi *</pattern>
+<template> film tersebut adalah sebagai berikut: </template>
+</category>
+
+<category>
+<pattern> film dengan genre *</pattern>
+<template> film tersebut adalah sebagai berikut: </template>
+</category>
+
+<category>
+<pattern> berikan rekomendasi film dengan genre *</pattern>
+<template> film tersebut adalah sebagai berikut: </template>
+</category>
+
+<category>
+<pattern> film yang mirip dengan *</pattern>
+<template> film tersebut adalah sebagai berikut: </template>
+</category>
+
+<category>
+<pattern> apa saja film yang mirip dengan *</pattern>
+<template> film tersebut adalah sebagai berikut: </template>
+</category>
+
+</aiml>
