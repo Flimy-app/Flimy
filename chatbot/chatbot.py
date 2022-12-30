@@ -81,17 +81,24 @@ def response():
             if star_overlap >= 0.3:
                 index.append(df.iloc[i]['Title'])      
             i = i + 1
-        title_random = random.choices(index, k=3)
-        title = ''
-        for x in title_random:
-            if title == '':
-                title = x
-            else:
-                title = title + ', ' + x
-        end = time.time()
-        return jsonify( jawaban + ' ' + title)
-        # print('Bot> ' + jawaban + ' ' + title)
-        # print(end-start)
+        if index != []:
+            title_random = random.choices(index, k=3)
+            title = ''
+            temporary = ''
+            for x in title_random:
+                if title == '':
+                    temporary = x
+                    title = x
+                if temporary != x:
+                    temporary = x
+                    title = title + ', ' + x
+            end = time.time()
+            return jsonify( jawaban + ' ' + title)
+            # print('Bot> ' + jawaban + ' ' + title)
+            # print(end-start)
+        else:
+            return jsonify("Film tidak ditemukan")
+            # print('Bot> Film tidak ditemukan')
     elif 'film dengan genre' in input_text or 'berikan rekomendasi film dengan genre' in input_text:
         jawaban = kernel.respond(input_text)
         input_text = stemmer.stem(input_text)
@@ -109,17 +116,24 @@ def response():
             if genre_overlap >= 0.2:
                 index.append(df.iloc[i]['Title'])      
             i = i + 1
-        title_random = random.choices(index, k=3)
-        title = ''
-        for x in title_random:
-            if title == '':
-                title = x
-            else:
-                title = title + ', ' + x
-        end = time.time()
-        return jsonify(  jawaban + ' ' + title)
-        # print('Bot> ' +  jawaban + ' ' + title)
-        # print(end-start)
+        if index != []:
+            title_random = random.choices(index, k=3)
+            title = ''
+            temporary = ''
+            for x in title_random:
+                if title == '':
+                    temporary = x
+                    title = x
+                if temporary != x:
+                    temporary = x
+                    title = title + ', ' + x
+            end = time.time()
+            return jsonify( jawaban + ' ' + title)
+            # print('Bot> ' + jawaban + ' ' + title)
+            # print(end-start)
+        else:
+            return jsonify("Film tidak ditemukan")
+            # print('Bot> Film tidak ditemukan')
     elif 'film yang mirip dengan' in input_text or 'apa saja film yang mirip dengan' in input_text:
         jawaban = kernel.respond(input_text)
         input_text = stemmer.stem(input_text)
@@ -137,17 +151,24 @@ def response():
             if title_overlap >= 0.3:
                 index.append(df.iloc[i]['Title'])      
             i = i + 1
-        title_random = random.choices(index, k=3)
-        title = ''
-        for x in title_random:
-            if title == '':
-                title = x
-            else:
-                title = title + ', ' + x
-        end = time.time()
-        return jsonify( jawaban + ' ' + title)
-        # print('Bot> ' + jawaban + ' ' + title)
-        # print(end-start)
+        if index != []:
+            title_random = random.choices(index, k=3)
+            title = ''
+            temporary = ''
+            for x in title_random:
+                if title == '':
+                    temporary = x
+                    title = x
+                if temporary != x:
+                    temporary = x
+                    title = title + ', ' + x
+            end = time.time()
+            return jsonify( jawaban + ' ' + title)
+            # print('Bot> ' + jawaban + ' ' + title)
+            # print(end-start)
+        else:
+            return jsonify("Film tidak ditemukan")
+            # print('Bot> Film tidak ditemukan')
     else:
         return jsonify('Maaf saya tidak bisa menjawab pertanyaan tersebut')
         # print('Bot> Maaf saya tidak bisa menjawab pertanyaan tersebut')
