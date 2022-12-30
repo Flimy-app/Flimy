@@ -148,7 +148,7 @@ def response():
             title = tokenfilter(title)
             title_overlap = overlap(input_text, title)
             print(title_overlap)
-            if title_overlap >= 0.3:
+            if title_overlap >= 0.5:
                 index.append(df.iloc[i]['Title'])      
             i = i + 1
         if index != []:
